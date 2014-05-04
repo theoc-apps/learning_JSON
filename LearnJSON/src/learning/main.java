@@ -45,7 +45,7 @@ public class main {
 	    String test = parkinglots.getCarparks().get(0).toString();
 	    
 	    System.out.println(test);
-	    Carparks carparks = gson.fromJson(test, Carparks,);
+	    Carparks carparks = gson.fromJson(test, Carparks);
 	    for (Carparks carparks : parkinglots.getCarparks())
 	        System.out.println("    " + carparks.getId());
 	    
