@@ -13,6 +13,7 @@ import java.util.List;
 
 
 
+
 import com.google.gson.Gson;
 
 public class main {
@@ -42,16 +43,18 @@ public class main {
 	    Parking parkinglots = gson.fromJson(json, Parking.class);
 	    //Carparks carparks = gson.fromJson(parkinglots.getCarparks(), Carparks.class);
 	    
-	    String test = parkinglots.getCarparks().get(0).toString();
+	    List test = parkinglots.getCarparks();
 	    
-	    System.out.println(test);
-	    Carparks carparks = gson.fromJson(test, Carparks);
-	    for (Carparks carparks : parkinglots.getCarparks())
-	        System.out.println("    " + carparks.getId());
+	    //System.out.println(test.toString());
+	    //Carparks carparks = gson.fromJson(test, Carparks);
+	    //for (Carparks carparks : parkinglots.getCarparks())
+	    //    System.out.println("    " + carparks.getId());
 	    
-	    //for (int i = 0; i < carpark.size(); i++){
-	    //	System.out.println(carpark.get(i));
-	    //}
+	    for (int i = 0; i < test.size(); i++){
+	    	//System.out.println(test.get(i));
+	    	Carparks json2 = (Carparks) test.get(i);
+	    	System.out.println(json2.getAddress());
+	    }
 	    //parkinglots.setCarparks(parkinglots.getCarparks());
 	    //System.out.println(carparks.getId());
 	    

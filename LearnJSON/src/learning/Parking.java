@@ -4,12 +4,12 @@ package learning;
 import java.util.List;
 
 public class Parking{
-   	private List carparks;
+   	private List<Carparks> carparks;
 
- 	public List getCarparks(){
+ 	public List<Carparks> getCarparks(){
 		return this.carparks;
 	}
-	public void setCarparks(List carparks){
+	public void setCarparks(List<Carparks> carparks){
 		this.carparks = carparks;
 	}
 }
